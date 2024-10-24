@@ -10,3 +10,5 @@ print("Ahmed"[1:3])
 names.remove(names[3])
 print(names)
 print(len(names))
+if "Ahmed" in names:
+    print("Yes")
