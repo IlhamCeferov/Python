@@ -1,3 +1,8 @@
+def print_all_notes(notes):
+  for note in notes:
+      print(f"{notes.index(note)+1}. {note}")
+
+
 notes = []
 
 while True:    
@@ -11,19 +16,16 @@ while True:
   if choice == "4":
     break
   elif choice == "1":
-    for note in notes:
-      print(f"{notes.index(note)+1}. {note}")
+    print_all_notes(notes)
   elif choice == "2":
     note = input("Add note here: ")
     notes.append(note)
     print("Your note added!")
   elif choice == "3":
-    for note in notes:
-      print(f"{notes.index(note)+1}. {note}")
+    print_all_notes(notes)
     delete = int(input("Enter number of the note: "))
     notes.remove(notes[delete - 1])
-    for note in notes:
-      print(f"{notes.index(note)+1}. {note}")
+    print_all_notes(notes)
     print("Your note succesfuly removed!")
 print("Good bye!")
 
